@@ -1,51 +1,49 @@
 <div id="map"></div>
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.5/ol.css"  />
-    <script src="//cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.5/ol.js" ></script>
-      <script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.5/ol.js" ></script>
+<script>
 
-      var proj900913 = 'EPSG:900913';
-      var proj4326 = 'EPSG:4326';
-      var map2 = new ol.Map({
-              layers: [
-                new ol.layer.Tile({
-                  source: new ol.source.OSM({
-                    attributions: [
-                      new ol.Attribution({ html: "<a href='http://osm.org' target='_blank'>©OpenStretMap</a>"}),
-                      new ol.Attribution({ html: "<a href='https://danielquisbert.github.io' target='_blank'>©DMQC</a>"})],
-                  })
-                })
-              ],
-              target: 'map',
-              controls: ol.control.defaults({
-                rotate: false
-              }),
-              interactions: ol.interaction.defaults({mouseWheelZoom: false}),
-              view: new ol.View({
-                projection: proj900913,
-                center: ol.proj.transform([-68.189341,-16.481129], proj4326, proj900913),
-                zoom: 17
-              })
-              
-
-            });
-            
-            var markers = new ol.layer.Vector({
-            source: new ol.source.Vector(),
-            style: new ol.style.Style({
-                image: new ol.style.Icon({
-                anchor: [0.5, 1],
-                src: 'http://cdn.mapmarker.io/api/v1/pin?text=P&size=50&hoffset=1'
-                })
+    var proj900913 = 'EPSG:900913';
+    var proj4326 = 'EPSG:4326';
+    var map2 = new ol.Map({
+        layers: [
+        new ol.layer.Tile({
+            source: new ol.source.OSM({
+            attributions: [
+                new ol.Attribution({ html: "<a href='http://osm.org' target='_blank'>©OpenStretMap</a>"}),
+                new ol.Attribution({ html: "<a href='https://danielquisbert.github.io' target='_blank'>©DMQC</a>"})],
             })
-            });
-            map2.addLayer(markers);
+        })
+        ],
+        target: 'map',
+        controls: ol.control.defaults({
+        rotate: false
+        }),
+        interactions: ol.interaction.defaults({mouseWheelZoom: false}),
+        view: new ol.View({
+        projection: proj900913,
+        center: ol.proj.transform([-68.189569,-16.480955], proj4326, proj900913),
+        zoom: 17
+        }) 
+    });
+            
+    var markers = new ol.layer.Vector({
+    source: new ol.source.Vector(),
+    style: new ol.style.Style({
+        image: new ol.style.Icon({
+        anchor: [0.5, 1],
+        src: 'http://cdn.mapmarker.io/api/v1/pin?text=P&size=50&hoffset=1'
+        })
+    })
+    });
+    map2.addLayer(markers);
 
-            var marker = new ol.Feature(new ol.geom.Point(ol.proj.fromLonLat([-68.189341,-16.481129])));
-            markers.getSource().addFeature(marker);
+    var marker = new ol.Feature(new ol.geom.Point(ol.proj.fromLonLat([-68.189569,-16.480955]))); 
+    markers.getSource().addFeature(marker);
 
 
 
 
       //var mouseWheelZoom = new ol.MouseWheelZoom();
       //mouseWheelZoom.setActive(false);
-      </script>
+</script>

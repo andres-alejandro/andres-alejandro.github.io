@@ -7,6 +7,10 @@ img: i-rest.jpg # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [Holidays, Hawaii]
 ---
+
+
+
+
 Te esperamos en la Avenida Cívica 
 
 
@@ -14,37 +18,32 @@ Te esperamos en la Avenida Cívica
 <style>
     /* CSS general */
 .mi-iframe {
-  width: 100px;
-  height: 50px;
+  min-width: 100px;
+  min-height: 50px;
 }
 
 /* CSS pantallas de 320px o superior */
 @media (min-width: 320px) {
-
   .mi-iframe {
     width: 200px;
     height: 150px;
   } 
-
 }
 
 /* CSS pantalla 768px o superior */
 @media (min-width: 768px) {
-
   .mi-iframe {
     width: 500px;
-    height: 350px;
+    height: 400px;
   } 
-
 }
 </style>
 <div class="mi-iframe">
-<iframe src="../map.html" width="500" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+<iframe src="../map.html" width="500" height="500" frameborder="0" style="border:0;" allowfullscreen>
 </iframe>
 </div>
 {{< /rawhtml >}}
 
 
 
-![I and My friends]({{site.baseurl}}/assets/img/we-in-rest.jpg)
 
