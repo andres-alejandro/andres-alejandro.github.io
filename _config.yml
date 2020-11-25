@@ -1,7 +1,8 @@
 # Site settings
-title: Modern Blog
-description: Modern-Blog A Elegant template for Jekyll
-keywords: Modern, Blogging, Fun
-author: Wferr
+title: Mis cumpleaños
+description: Sitio para mostrar todos los momentos compartidos en los cumpleaños de Andres y Alejandro
+keywords: familia, fiesta
+author: DanielQuisbert
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
+
