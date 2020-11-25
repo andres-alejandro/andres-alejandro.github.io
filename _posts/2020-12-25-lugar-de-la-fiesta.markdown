@@ -11,7 +11,7 @@ Te esperamos en la Avenida Cívica
 
 
 {{< rawhtml >}}
-<iframe src="./map.html" width="750" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+<iframe src="../map.html" width="400" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
 </iframe>
 {{< /rawhtml >}}
 
