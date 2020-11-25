@@ -12,7 +12,8 @@ tags: [Holidays, Hawaii]
 
 
 
-Te esperamos en la Avenida Cívica 
+Te esperamos en la Avenida Cívica #3031, a unos pasos de la plaza Juan José Torez.
+Te esperamos desde Hrs. 14.00, se puntual para cumplir con las normas de de sanidad y no olvides tu barbijo :)
 
 
 {{< rawhtml >}}
