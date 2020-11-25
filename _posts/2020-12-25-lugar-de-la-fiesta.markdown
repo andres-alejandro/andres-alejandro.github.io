@@ -3,7 +3,8 @@ layout: post
 title: ¿Dónde será la fiesta?
 date: 2020-12-25 13:32:20 +0300
 description: En esta sección te indicamos exactamente el lugar.
-img: i-rest.jpg # Add image post (optional)
+#img: i-rest.jpg # Add image post (optional)
+img-portada: i-rest.jpg # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [Holidays, Hawaii]
 ---
