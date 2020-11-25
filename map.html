@@ -11,7 +11,7 @@
                   source: new ol.source.OSM({
                     attributions: [
                       new ol.Attribution({ html: "<a href='http://osm.org' target='_blank'>©OpenStretMap</a>"}),
-                      new ol.Attribution({ html: "<a href='https://ge0tic.github.io' target='_blank'>©ge0tic</a>"})],
+                      new ol.Attribution({ html: "<a href='https://danielquisbert.github.io' target='_blank'>©DMQC</a>"})],
                   })
                 })
               ],
@@ -28,6 +28,24 @@
               
 
             });
+            
+            var markers = new ol.layer.Vector({
+            source: new ol.source.Vector(),
+            style: new ol.style.Style({
+                image: new ol.style.Icon({
+                anchor: [0.5, 1],
+                src: 'http://cdn.mapmarker.io/api/v1/pin?text=P&size=50&hoffset=1'
+                })
+            })
+            });
+            map2.addLayer(markers);
+
+            var marker = new ol.Feature(new ol.geom.Point(ol.proj.fromLonLat([-68.189341,-16.481129])));
+            markers.getSource().addFeature(marker);
+
+
+
+
       //var mouseWheelZoom = new ol.MouseWheelZoom();
       //mouseWheelZoom.setActive(false);
       </script>
