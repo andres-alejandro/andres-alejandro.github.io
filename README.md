@@ -1,17 +1,36 @@
-# Jekyll Modern Blog
+# Flexible-Jekyll is a simple and clean theme for Jekyll
 
-A Simple, Clean and responsive modern blog for jekyll.
+![](https://github.com/artemsheludko/flexible-jekyll/blob/master/assets/img/promo-img.jpg?raw=true)
 
-## [Live Demo](http://inded.github.io/Jekyll_modern-blog/)
+## Demo
 
-## Attributions
-Based off of this [article from Codrops](http://tympanus.net/codrops/?p=24222)
-Using Sample images from [Fancy Crave](http://fancycrave.com/)
+Check the theme in action [Demo](https://artemsheludko.github.io/flexible-jekyll/)
+
+The main page would look like this:
+
+![Main page preview](https://github.com/artemsheludko/flexible-jekyll/blob/master/assets/img/home-page.jpg?raw=true)
+
+The post page would look like this:
+
+![Post page preview](https://github.com/artemsheludko/flexible-jekyll/blob/master/assets/img/post-example.jpg?raw=true)
+
+## Features
+
+- [Google Fonts](https://fonts.google.com/)
+- [Font Awesome](http://fontawesome.io/)
+- [Disqus](https://disqus.com/)
+- [Analytics](https://analytics.google.com/analytics/web/)
+- Support Emoji
+
+## Installation:
+
+Fork the ``master`` branch and follow the [Jekyll Installation Documentation](https://jekyllrb.com/docs/installation/).
 
 ## License
 
-Based off of this [Article on Codrops](http://tympanus.net/codrops/?p=24222)
+GNU General Public License v3.0
 
-Created by Claudio Calautti for Codrops. Released under the [GNU GPL license v3](https://www.gnu.org/licenses/gpl-3.0.html).
+## Donate
 
-Changes being that I made it jekyll ready and smushed the CSS together.
+<p>If you like the themes that I create you can become my sponsor on <a href="https://www.patreon.com/artemsheludko" target="_blank">Patreon</a>.
+<p align="center"><b>Thank you for your support ❤️</b></p>
