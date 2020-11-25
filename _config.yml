@@ -42,3 +42,8 @@ gems:
 maps:
   google:
     api_key: AIzaSyAWGV-uEDtw1I-Oo3jOEaWhd9rTifR_0VE
+
+# _posts/2020-12-25-lugar-de-la-fiesta.markdown
+  location:
+    latitude: 51.5285582
+    longitude: -0.2416807
