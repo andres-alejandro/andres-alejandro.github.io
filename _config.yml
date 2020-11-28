@@ -1,7 +1,7 @@
 # Site settings
-title: CLUBPASTEL
+title: ANDRES-ALEJANDRO
 email: ""
-description: "Sitio oficial Club Pastel"
+description: "Sitio para los cumpleaños de Andres y Alejandro"
 url: "https://andres-alejandro.github.io"
 baseurl: "/"
 facebook_username: ""
@@ -15,10 +15,10 @@ share: true
 
 # Owner/author information
 owner:
-  name:   clubpastel
+  name:   andres-alejandro
   avatar: avatar.png
   favicon: favicon.ico
-  info: Club pastel
+  info: Andres y Alejandro
 
 # Settings for comments helper
 # Set 'provider' to the comment provider you want to use. (i.e.  Disqus, Intense Debate, livefyre, or Facebook Comments)
@@ -33,9 +33,9 @@ comments :
 
 # Internal nav
 nav:
-  - GALERÍA: "https://club-pastel.github.io/gallery/"  
-  - SERVICIOS: "https://club-pastel.github.io/journal/"
-  - NOSOTROS: "https://club-pastel.github.io/about/"
+  - GALERÍA: "https://andres-alejandro.github.io/gallery/"  
+  - SERVICIOS: "https://andres-alejandro.github.io/journal/"
+  - NOSOTROS: "https://andres-alejandro.github.io/about/"
 
 # All translation keys
 translations:
