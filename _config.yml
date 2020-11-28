@@ -1,49 +1,73 @@
-title: Te invitamos a nuestra fiesta de cumpleaños
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-permalink: ':title/'
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-site-twitter: #if your site has a twitter account, enter it here
+# Site settings
+title: CLUBPASTEL
+email: ""
+description: "Sitio oficial Club Pastel"
+url: "https://club-pastel.github.io"
+baseurl: "/"
+facebook_username: ""
+twitter_username: ""
+instagram_username: ""
+github_username:  ""
+deviantart_username: ""
+flickr_username: ""
+discus_shortname: ""
+share: true
 
-# Author Settings
-author: David Freeman # add your name
-author-img: foto-tilis.jpeg # add your photo
-about-author: Vena divertirte con nosotros, apreciaremos mucho tu presencia.
-social-twitter: # add your Twitter handle
-social-facebook: # add your Facebook handle
-social-github: artemsheludko # add your Github handle
-social-linkedin: # add your Linkedin handle
-social-email: # add your Email address
+# Owner/author information
+owner:
+  name:   clubpastel
+  avatar: avatar.png
+  favicon: favicon.ico
+  info: Club pastel
 
-# Disqus
-discus-identifier: mr-brown # add your discus identifier
+# Settings for comments helper
+# Set 'provider' to the comment provider you want to use. (i.e.  Disqus, Intense Debate, livefyre, or Facebook Comments)
+# Set 'provider' to false to turn commenting off globally.
+#Set 'provider: false' to disable comments globally.
+# Disable comments for individual pages/posts by specifying 'comments: false' in the page/post YAML Front Matter.
+#
+comments :
+  provider : disqus
+  disqus :
+    short_name : ""
 
-# Tracker
-analytics: # Google Analytics
+# Internal nav
+nav:
+  - GALERÍA: "https://club-pastel.github.io/gallery/"  
+  - SERVICIOS: "https://club-pastel.github.io/journal/"
+  - NOSOTROS: "https://club-pastel.github.io/about/"
 
-# Build Settings
+# All translation keys
+translations:
+ # 404.html
+  permalink: "/404.html"
+
+# Server
+destination:      	 ./_site
+port:             	 4000
+
+
+# Build settings
 markdown: kramdown
-plugins:
-  - jekyll-sitemap
-  - jekyll-paginate
-  - jemoji
+highlighter: rouge
+permalink: pretty
+paginate: 5
+paginate_path: "/page:num/"
+permalink: "/:title/"
+categories_path: "/category/"
+tags_path: "/tag/"
+gems: 
+ - jekyll-paginate
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
-paginate: 8
-paginate_path: "/page/:num"
-
-exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
-
-gems:
-  - jekyll-maps
-
-maps:
-  google:
-    api_key: AIzaSyAWGV-uEDtw1I-Oo3jOEaWhd9rTifR_0VE
-
-# _posts/2020-12-25-lugar-de-la-fiesta.markdown
-  location:
-    latitude: 51.5285582
-    longitude: -0.2416807
+# SiteMap
+sitemap:
+    file: "/sitemap.xml"
+    exclude:
+        - "/atom.xml"
+        - "/feed.xml"
+        - "/feed/index.xml"
+    include_posts:
+        - "/writing/"
+    change_frequency_name: "change_frequency"
+    priority_name: "priority"
