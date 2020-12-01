@@ -67,6 +67,13 @@ header-img: "img/donde-bg.jpg"
       var proj900913 = 'EPSG:900913';
       var proj4326 = 'EPSG:4326';
       var map2 = new ol.Map({
+              
+              
+              controls: ol.control.defaults().extend([
+                new ol.control.FullScreen({
+                  source: 'fullscreen'
+                })
+              ]),
               layers: [
                 new ol.layer.Tile({
                   source: new ol.source.OSM({
@@ -76,13 +83,9 @@ header-img: "img/donde-bg.jpg"
                   })
                 })
               ],
+
+              //interactions: ol.interaction.defaults({mouseWheelZoom: false}),
               target: 'map',
-              controls: ol.control.defaults().extend([
-                new ol.control.FullScreen({
-                  source: 'fullscreen'
-                })
-              ]),
-              interactions: ol.interaction.defaults({mouseWheelZoom: false}),
               view: new ol.View({
                 projection: proj900913,
                 center: ol.proj.transform([-68.189341,-16.481129], proj4326, proj900913),
