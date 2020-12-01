@@ -35,7 +35,7 @@ comments :
 # Internal nav
 nav:
   - Inicio: "https://andres-alejandro.github.io/"
-  - ¿Dónde?: "https://andres-alejandro.github.io/journal/"
+  - ¿Dónde?: "https://andres-alejandro.github.io/lugar/"
   - Fotos: "https://andres-alejandro.github.io/gallery/"
   #- NOSOTROS: "https://andres-alejandro.github.io/about/"
 
