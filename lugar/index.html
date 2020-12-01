@@ -79,9 +79,7 @@ header-img: "img/donde-bg.jpg"
                 })
               ],
               target: 'footer-map',
-              controls: ol.control.defaults({
-                rotate: false
-              }).extend([
+              controls: ol.control.defaults().extend([
                 new ol.control.FullScreen({
                   source: 'fullscreen'
                 })
