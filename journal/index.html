@@ -1,7 +1,7 @@
-e---
+---
 layout: page
 description: "Journal"
-title: "Writings"
+title: "¿Dónde sera la fiesta?"
 active: journal
 header-img: "img/donde-bg.jpg"
 ---
@@ -12,75 +12,51 @@ header-img: "img/donde-bg.jpg"
 
 <body class="journal">
 <div class="archive">
-  <h1 class="archive-title" style="display:inline-block;"> POSTS </h1>
+  <h1 class="archive-title" style="display:inline-block;"> Mapa del lugar </h1>
+</div>
 
 <div style="font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif; display:inline-block;margin-left:.5em;">
-    Browse by <a href="{{ site.baseurl }}/journal/category/">Category</a> or <a href="{{ site.baseurl }}/journal/tag/">Tag</a>
-  </div>
-</div>
-
-<section class="section--postsWrapper">
-  <div class="container">
-    <div class="blockGroup">
-      <ul class="blockGroup-list">
-
-{% for post in paginator.posts %}
+    <p>
+      La fiesta será este pŕoximo 12 de Diciembre de 2020, en la Avenida Cívica, Zona Huayna Potosí #3031, El Alto, a unos pasos de regimiento 5 y a un tropezón de la plaza Juan José Torrez.
+    </p>
 
 
- {% assign post = site.posts.first %}
-  {% assign content = post.content %}
-  
-<li class="block">
-<div class="postArticle-wrapper">
-
-<div class="post-preview" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #530720;">
-    
-<a href="{{ post.url | prepend: site.baseurl }}">
-        {% if post.image.feature %}
-	<img src="{{ site.baseurl }}/img/postcover/{{ post.image.feature }}">
-	{% endif %}
- 
- 
-        <p class="post-title" style="font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 16px; margin-left: 1em;"> &#9658; {{ post.title }}
-        </p>
-</a>
-        {% if post.subtitle %}
-        <p class="post-subtitle" style="font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 12px; margin-left: 1em;"> {{ post.subtitle }}</p>
-        {% endif %}
-    
-    <p class="post-meta" style="font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 10px; margin-left: 1em;"> Posted on {{ post.date | date: "%B %-d, %Y" }}</p>
-</div>
 
 </div>
-</li>
- {% endfor %}
-<p>&nbsp;</p>
-      </ul>
-    </div>
-  </div>
-</section>
+<div class="footer-content" id="footer-map"></div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.5/ol.css"  />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.5/ol.js" ></script>
+      <script>
+
+      var proj900913 = 'EPSG:900913';
+      var proj4326 = 'EPSG:4326';
+      var map2 = new ol.Map({
+              layers: [
+                new ol.layer.Tile({
+                  source: new ol.source.OSM({
+                    attributions: [
+                      new ol.Attribution({ html: "<a href='http://osm.org' target='_blank'>©OpenStretMap</a>"}),
+                      new ol.Attribution({ html: "<a href='https://ge0tic.github.io' target='_blank'>©ge0tic</a>"})],
+                  })
+                })
+              ],
+              target: 'footer-map',
+              controls: ol.control.defaults({
+                rotate: false
+              }),
+              interactions: ol.interaction.defaults({mouseWheelZoom: false}),
+              view: new ol.View({
+                projection: proj900913,
+                center: ol.proj.transform([-68.189341,-16.481129], proj4326, proj900913),
+                zoom: 17
+              })
+              
+
+            });
+      //var mouseWheelZoom = new ol.MouseWheelZoom();
+      //mouseWheelZoom.setActive(false);
+      </script>
 
 
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-<ul class="pager" style="font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;" >
-    {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-    </li>
-    {% endif %}
-
-<span class="button-height"> Page {{paginator.page}} of {{paginator.total_pages}}</span>
-
-    {% if paginator.next_page %}
-    <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-    </li>
-    {% endif %}
-</ul>
-{% endif %}
-
-<br>
-<h6>Image Source: <a href="https://unsplash.com/photos/8muUTAmcWU4">UNSPLASH</a>
 
 </body>
