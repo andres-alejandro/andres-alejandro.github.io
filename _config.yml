@@ -1,7 +1,7 @@
 # Site settings
 title: ANDRES-ALEJANDRO
 email: ""
-website: "https://danielquisbert.github.io"
+website: "/"
 description: "Sitio para los cumpleaños de Andres y Alejandro"
 url: "https://andres-alejandro.github.io"
 baseurl: "/"
