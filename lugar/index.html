@@ -29,10 +29,9 @@ header-img: "img/donde-bg.jpg"
 
 <div class="map" id="map"></div>
 <link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
-
-
-
-    <style>
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+<script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
+<style>
       .fullscreen:-moz-full-screen {
         height: 100%;
       }
@@ -63,7 +62,6 @@ header-img: "img/donde-bg.jpg"
         float: left;
       }
     </style>
-    <script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
       <script>
 
       var proj900913 = 'EPSG:900913';
