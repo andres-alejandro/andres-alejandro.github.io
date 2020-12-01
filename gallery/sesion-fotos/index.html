@@ -1,0 +1,180 @@
+---
+layout: page
+title: "Sesión de fotos"
+description: ""
+active: gallery
+header-img: "img/fotos-bg.jpg"
+album-title: "Sesión de fotos"
+images:
+ - image_path: /gallery/sesion-fotos/1.jpg
+   caption: Sesión de fotos cumpleaños número DoS
+   copyright: © Andres y Alejandro
+ - image_path: /gallery/sesion-fotos/2.jpg
+   caption: Sesión de fotos cumpleaños número DoS
+   copyright: © Andres y Alejandro
+ - image_path: /gallery/sesion-fotos/3.jpg
+   caption: Sesión de fotos cumpleaños número DoS
+   copyright: © Andres y Alejandro
+ - image_path: /gallery/sesion-fotos/4.jpg
+   caption: Sesión de fotos cumpleaños número DoS
+   copyright: © Andres y Alejandro
+ - image_path: /gallery/sesion-fotos/5.jpg
+   caption: Sesión de fotos cumpleaños número DoS
+   copyright: © Andres y Alejandro
+ - image_path: /gallery/sesion-fotos/6.jpg
+   caption: Sesión de fotos cumpleaños número DoS
+   copyright: © Andres y Alejandro
+ - image_path: /gallery/sesion-fotos/7.jpg
+   caption: Sesión de fotos cumpleaños número DoS
+   copyright: © Andres y Alejandro
+ - image_path: /gallery/sesion-fotos/8.jpg
+   caption: Sesión de fotos cumpleaños número DoS
+   copyright: © Andres y Alejandro
+ - image_path: /gallery/sesion-fotos/9.jpg
+   caption: Sesión de fotos cumpleaños número DoS
+   copyright: © Andres y Alejandro
+ - image_path: /gallery/sesion-fotos/10.jpg
+   caption: Sesión de fotos cumpleaños número DoS
+   copyright: © Andres y Alejandro
+ - image_path: /gallery/sesion-fotos/11.jpg
+   caption: Sesión de fotos cumpleaños número DoS
+   copyright: © Andres y Alejandro
+ - image_path: /gallery/sesion-fotos/12.jpg
+   caption: Sesión de fotos cumpleaños número DoS
+   copyright: © Andres y Alejandro
+ - image_path: /gallery/sesion-fotos/13.jpg
+   caption: Sesión de fotos cumpleaños número DoS
+   copyright: © Andres y Alejandro
+ - image_path: /gallery/sesion-fotos/14.jpg
+   caption: Sesión de fotos cumpleaños número DoS
+   copyright: © Andres y Alejandro
+ - image_path: /gallery/sesion-fotos/15.jpg
+   caption: Sesión de fotos cumpleaños número DoS
+   copyright: © Andres y Alejandro
+ - image_path: /gallery/sesion-fotos/16.jpg
+   caption: Sesión de fotos cumpleaños número DoS
+   copyright: © Andres y Alejandro
+ - image_path: /gallery/sesion-fotos/17.jpg
+   caption: Sesión de fotos cumpleaños número DoS
+   copyright: © Andres y Alejandro
+ - image_path: /gallery/sesion-fotos/18.jpg
+   caption: Sesión de fotos cumpleaños número DoS
+   copyright: © Andres y Alejandro
+ - image_path: /gallery/sesion-fotos/19.jpg
+   caption: Sesión de fotos cumpleaños número DoS
+   copyright: © Andres y Alejandro
+ - image_path: /gallery/sesion-fotos/20.jpg
+   caption: Sesión de fotos cumpleaños número DoS
+   copyright: © Andres y Alejandro
+ - image_path: /gallery/sesion-fotos/21.jpg
+   caption: Sesión de fotos cumpleaños número DoS
+   copyright: © Andres y Alejandro
+ - image_path: /gallery/sesion-fotos/22.jpg
+   caption: Sesión de fotos cumpleaños número DoS
+   copyright: © Andres y Alejandro
+ - image_path: /gallery/sesion-fotos/23.jpg
+   caption: Sesión de fotos cumpleaños número DoS
+   copyright: © Andres y Alejandro
+ - image_path: /gallery/sesion-fotos/24.jpg
+   caption: Sesión de fotos cumpleaños número DoS
+   copyright: © Andres y Alejandro
+ - image_path: /gallery/sesion-fotos/25.jpg
+   caption: Sesión de fotos cumpleaños número DoS
+   copyright: © Andres y Alejandro
+ - image_path: /gallery/sesion-fotos/26.jpg
+   caption: Sesión de fotos cumpleaños número DoS
+   copyright: © Andres y Alejandro
+ - image_path: /gallery/sesion-fotos/27.jpg
+   caption: Sesión de fotos cumpleaños número DoS
+   copyright: © Andres y Alejandro
+ - image_path: /gallery/sesion-fotos/28.jpg
+   caption: Sesión de fotos cumpleaños número DoS
+   copyright: © Andres y Alejandro
+ - image_path: /gallery/sesion-fotos/29.jpg
+   caption: Sesión de fotos cumpleaños número DoS
+   copyright: © Andres y Alejandro
+ 
+ 
+---
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+</head>
+
+    <body>
+ 
+	<section id="content" role="main">
+		<div class="wrapper">
+	<br><br>
+			<h2>{{page.album-title}}</h2>
+
+
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+		
+{% for image in page.images %}  		
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+
+<a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup"  title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+<img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
+						
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary" id="{{ image.caption }}">
+							<h3>{{image.caption}}</h3>
+							<p>{{image.copyright}}</p>
+						</div>
+					</figcaption>
+				</figure>
+				
+{% endfor %}
+
+			</div>
+
+		</div><!-- END .wrapper -->
+	</section>
+
+<!-- jQuery -->    
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- include image popups -->
+<script src="{{ site.baseurl }}/js/jquery.magnific-popup.js"></script>
+
+<script type="text/javascript">
+      $(document).ready(function($) {
+        $('a.popup').magnificPopup({
+         type: 'image',
+	  gallery:{
+         enabled:true,
+         navigateByImgClick: true,
+         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+       },
+image: {
+      titleSrc: function(item) {
+              return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
+            }
+        }
+          // other options
+      });
+});
+    </script>
+
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+    
+</body></html>
